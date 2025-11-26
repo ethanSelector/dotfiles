@@ -26,4 +26,4 @@ ln -sf "$TARGET" "$SYMLINK"
 pkill hyprpaper         # kill old process
 hyprpaper >/dev/null 2>&1 &
 
-echo "Wallpaper switched to $1"
+echo "Wallpaper changed to $1"
