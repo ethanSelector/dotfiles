@@ -1,0 +1,22 @@
+# Final minimal permanent fix (only GPP0, nothing else)
+# Update your systemd service to this (replace the old one):
+
+# Run
+sudo vim /etc/systemd/system/disable-gpu-wakeup.service
+
+# Include
+ini[Unit]
+Description=Disable RX 9060 XT PCIe wakeup on B550 (GPP0)
+After=multi-user.target suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo GPP0 > /proc/acpi/wakeup"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
+# Run
+sudo systemctl daemon-reload
+sudo systemctl enable --now disable-gpu-wakeup.service
