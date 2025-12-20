@@ -10,6 +10,7 @@
         "cpu",
 	"temperature",
 	"memory",
+	"custom/gpu",
 	"network#speed"
     ],
     "modules-center": [
@@ -29,6 +30,13 @@
         "tray",
     ],
     // Modules configuration
+    
+    "custom/gpu": {
+         "exec": "cat /sys/class/drm/card1/device/gpu_busy_percent",
+         "interval": 2,
+         "format": "{}% 󰍹 ",
+         "tooltip": false
+    },
     "hyprland/workspaces": {
          "disable-scroll": true,
          "all-outputs": true,
