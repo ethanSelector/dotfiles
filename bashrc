@@ -16,4 +16,4 @@ export PATH="$PATH:/home/ecv/.local/bin"
 
 export PATH="$HOME/bin:$PATH"
 
-export PATH=/home/gamer/.local/bin:/home/gamer/bin:/usr/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ecv/.local/bin
+
